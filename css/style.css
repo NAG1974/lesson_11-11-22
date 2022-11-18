@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&family=Merriweather:wght@700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1115px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header_wrapper {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px 0;
+    width: 100%;
+    z-index: 999999999;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 260px 486px 173px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    cursor: pointer;
+}
+
+header .logo h3 {
+    font-family: 'Merriweather', serif;
+    font-size: 36px;
+    line-height: 50px;
+    color: #005FA3;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+nav ul a {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.1em;
+    color: #222222;
+    transition: 0.3s;
+}
+
+nav ul a:hover {
+    color: #005FA3;
+}
+
+header button {
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 10px 21px;
+    border: 2px solid #000000;
+    border-radius: 25px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+header button:hover {
+    color: #005FA3;
+    border-color: #005FA3;
+    transform: scale(1.1);
+}
+
+main {
+    padding-top: 100px;
+}
+
+.services_wrapper {
+    background-color: #EBEBEB;
+}
+
+.services {
+    padding: 140px 0;
+}
+
+.services > h4 {
+    font-size: 24px;
+    line-height: 33px;
+    margin-bottom: 40px;
+    color: #BDBDBD;
+}
+
+.services > h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 48px;
+    line-height: 69px;
+    color: #333333;
+    margin-bottom: 102px;
+}
+
+.all_services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 360px);
+    gap: 30px;
+}
+
+.service {
+    background: url("../img/building.png") no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 40px 0 40px 45px;
+    height: 100%;
+}
+
+.service::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 65%);
+    transition: 0.3s;
+}
+
+.service:hover::after {
+    background: rgba(0, 95, 163, 65%);
+}
+
+.service_content {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    height: 100%;
+}
+
+.service_content h4 {
+    font-size: 24px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+.service_content button {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 10px 21px;
+    border: 2px solid #FFFFFF;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: transparent;
+    justify-self: start;
+    align-self: end;
+    transition: 0.3s;
+}
+
+.service_content button:hover {
+    transform: scale(1.1);
+}
+
+.about > h4 {
+    font-size: 24px;
+    line-height: 33px;
+    margin-top: 140px;
+    color: #BDBDBD;
+}
+
+.about-left > h2 {
+    font-family: 'Merriweather', serif;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 69px;
+    color: #333333;
+}
+
+.firma {
+    font-family: 'Merriweather', serif;
+    /* font-weight: 900;
+    font-size: 48px;
+    line-height: 69px; */
+    color: #005FA3;
+}
+
+.about-all {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   
+}
+
+.about-left {
+    display: grid;
+    grid-template-rows: 0.7fr 1fr;
+    width: 445px;
+    margin-top: 40px;
+}
+
+.about-right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 255px);
+    gap: 30px;
+    margin-bottom: 140px;
+}
+
+.about_content {
+    background-color: #EBEBEB;
+    padding: 30px 0 23px 30px;
+    display: grid;
+    justify-content: start;
+}
+
+.about_content:hover {
+    background-color: #005FA3;
+    transition: 0.3s;
+}
+
+.about_content > h2 {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 55px;
+    line-height: 66px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.about_content:hover > h2 {
+    color: #FFFFFF
+}
+
+.about_content > p {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000000;
+}
+
+.about_content:hover > p {
+    color: #FFFFFF;
+}
+
+.cases {
+    display: none;
+}
+
+.more {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #005FA3;
+    padding: 10px 21px;
+    border: 2px solid #000000;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: transparent;
+    justify-self: start;
+    align-self: end;
+    transition: 0.3s;
+}
+
+.about_content:hover > button {
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    transition: 0.3s;
+}
+
+.about_content:hover > button:hover {
+    transform: scale(1.1);
+}
+
+.contact {
+    display: none;
+}
