@@ -195,5 +195,17 @@ label {
     display: flex;
     flex-direction: column;
 }
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 19px;
+    color: #000000;
+    padding: 41px 0 36px;
 }
-    
+}
